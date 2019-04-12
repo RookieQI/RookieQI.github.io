@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2019%2F04%2F12%2F%E7%BB%83%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[Typora编辑器 —-书写即为美学官方网站:https://www.typora.io/ 支持平台 Windows Linux OSX 特点: 完美支持GitHub的Markdown语法; 人性化的书写方式: 表格的书写、挪动; 图片、超链接、网页表格复制; 目录生成; 支持LeTex公式书写; 支持Flowchart,Mermaid等流程图绘制; emoji,高亮,备注,上标,下标等书写; 生成网页,pdf,图片,甚至word,LeTex等格式。 基本的带快捷键的Markdown书写演示Ctrl+0到Ctrl4:普通文本、一级~四级标题; Ctrl+B : 加粗,加粗测试; Ctrl+I : 斜体,斜体测试; Ctrl+U: 下划线,下划线测试； Shift Alt+5: 删除线,删除线测试； 单机一下 ` : 行内代码块; Ctrl+K : 超链接,超链接测试;还支持文章内锚点,请Ctrl点击此处–&gt;第二节； Ctrl+T : 表格,支持拖拽移动、网页端表格复制转换: 标题 数据一 数据二 表格测试 943 baka Ctrl + Shift + Q: 引用 ： 连续按两下Enter可以退出引用 Enter+Enter Shift Ctrl I: 图片: 基本的不带快捷键Markdown书写演示部分功能需要在 文件- 偏好设置 中开启才能使用 `连续输入: 1234567```javapublic class Hello&#123; public static void main(String[] args)&#123; System.out.println(&quot;Hello World!&quot;); &#125;&#125; 无序、有序、任务列表 : JAVA PYTHON CSS 按下Tab可进入下一级列表 HTML 双击Enter退出列表 任务列表可以勾选选项 游戏 女人 代码]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[MarkDown编写文章]]></title>
+    <url>%2F2019%2F04%2F12%2FMarkDown%E7%BC%96%E5%86%99%E6%96%87%E7%AB%A0%2F</url>
+    <content type="text"><![CDATA[12345public class hello&#123; public static void main(String[] args)&#123; System.out.println("hello world!");&#125;&#125;]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[我终于有了自己的博客]]></title>
     <url>%2F2019%2F04%2F11%2F%E6%88%91%E7%BB%88%E4%BA%8E%E6%9C%89%E4%BA%86%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[#我叫傻狍子 #这是我个人博客的第一篇文章 访问百度 12345public class Test&#123; public static void main(String[] args)&#123; System.out.println(&quot;hello world!&quot;); &#125;&#125;]]></content>
