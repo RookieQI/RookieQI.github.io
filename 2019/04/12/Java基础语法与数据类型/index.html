@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="YangQi&#39;s blogs">
 <meta property="og:description" content="一、基本类型   byte/8 char/16     short/16 int/32   float/32 long/64   boolean/    包装类型基本类型都有对应的包装类型，基本类型与其对应的包装类型之间的赋值使用自动装箱与拆箱完成。 12Integer x = 2;     // 装箱int y = x;         // 拆箱 缓存池new Integer(123) 与 I">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-13T03:50:23.353Z">
+<meta property="og:updated_time" content="2019-04-13T10:38:04.611Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA基础语法与数据类型">
 <meta name="twitter:description" content="一、基本类型   byte/8 char/16     short/16 int/32   float/32 long/64   boolean/    包装类型基本类型都有对应的包装类型，基本类型与其对应的包装类型之间的赋值使用自动装箱与拆箱完成。 12Integer x = 2;     // 装箱int y = x;         // 拆箱 缓存池new Integer(123) 与 I">
@@ -433,12 +433,12 @@
 <li>new Integer(123) 每次都会新建一个对象；</li>
 <li>Integer.valueOf(123) 会使用缓存池中的对象，多次调用会取得同一个对象的引用。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Integer x = new Integer(123);	</span><br><span class="line">Integer y = new Integer(123);</span><br><span class="line">System.out.println(x == y);    // false,x与y为不同对象的引用</span><br><span class="line">Integer z = Integer.valueOf(123);</span><br><span class="line">Integer k = Integer.valueOf(123);</span><br><span class="line">System.out.println(z == k);   // true,x与y为缓冲池中同一对象的引用</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Integer x = <span class="keyword">new</span> Integer(<span class="number">123</span>);	</span><br><span class="line">Integer y = <span class="keyword">new</span> Integer(<span class="number">123</span>);</span><br><span class="line">System.out.println(x == y);    <span class="comment">// false,x与y为不同对象的引用</span></span><br><span class="line">Integer z = Integer.valueOf(<span class="number">123</span>);</span><br><span class="line">Integer k = Integer.valueOf(<span class="number">123</span>);</span><br><span class="line">System.out.println(z == k);   <span class="comment">// true,x与y为缓冲池中同一对象的引用</span></span><br></pre></td></tr></table></figure>
 <p>valueOf() 方法的实现比较简单，就是先判断值是否在缓存池中，如果在的话就直接返回缓存池的内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public static Integer valueOf(int i) &#123;</span><br><span class="line">    if (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high) //判断i是否在-128~127之间</span><br><span class="line">        return IntegerCache.cache[i + (-IntegerCache.low)]; //为true返回缓冲池中对象</span><br><span class="line">    return new Integer(i); //为false返回一个新对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title">valueOf</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high) <span class="comment">//判断i是否在-128~127之间</span></span><br><span class="line">        <span class="keyword">return</span> IntegerCache.cache[i + (-IntegerCache.low)]; <span class="comment">//为true返回缓冲池中对象</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Integer(i); <span class="comment">//为false返回一个新对象</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在 Java 8 中，Integer 缓存池的大小默认为 -128~127。</p>
 <p>编译器会在自动装箱过程调用 valueOf() 方法，因此多个值相同且值在缓存池范围内的 Integer 实例使用自动装箱来创建，那么就会引用相同的对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Integer m = 123;</span><br><span class="line">Integer n = 123;</span><br><span class="line">System.out.println(m == n); // true</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Integer m = <span class="number">123</span>;</span><br><span class="line">Integer n = <span class="number">123</span>;</span><br><span class="line">System.out.println(m == n); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 <p>基本类型对应的缓冲池如下：</p>
 <ul>
 <li>boolean values true and false</li>
@@ -453,9 +453,9 @@
 <p>value 数组被声明为 final，这意味着 value 数组初始化之后就不能再引用其它数组。并且 String 内部没有改变 value 数组的方法，因此可以保证 String 不可变。</p>
 <h3 id="String-Pool"><a href="#String-Pool" class="headerlink" title="String Pool"></a>String Pool</h3><p>字符串常量池(String Pool)保存所有字符串的字面量，这些字面量在编译时确定。</p>
 <h4 id="intern-方法"><a href="#intern-方法" class="headerlink" title="intern()方法"></a>intern()方法</h4><p>当一个String对象调用intern()方法时,如果 String Pool 中已经存在一个字符串和该字符串值相等（使用 equals() 方法进行确定），那么就会返回 String Pool 中字符串的引用；否则，就会在 String Pool 中添加一个新的字符串，并返回这个新字符串的引用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String s1 = new String(&quot;aaa&quot;);</span><br><span class="line">String s2 = new String(&quot;aaa&quot;);</span><br><span class="line">System.out.println(&quot;s1 == s2&quot;); false,s1,s2引用堆中不同对象	</span><br><span class="line">String s3 = s1.intern(); StringPool中先添加字符串&quot;aaa&quot;,然后s3引用该字符串</span><br><span class="line">String s4 = s1.intern(); StringPool已经存在字符</span><br><span class="line">串&quot;aaa&quot;,s4直接引用该字符串</span><br><span class="line">System.out.println(s3==s4); true,s3,s4引用的是StringPool中同一个字符串&quot;aaa&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String s1 = <span class="keyword">new</span> String(<span class="string">"aaa"</span>);</span><br><span class="line">String s2 = <span class="keyword">new</span> String(<span class="string">"aaa"</span>);</span><br><span class="line">System.out.println(<span class="string">"s1 == s2"</span>); <span class="keyword">false</span>,s1,s2引用堆中不同对象	</span><br><span class="line">String s3 = s1.intern(); StringPool中先添加字符串<span class="string">"aaa"</span>,然后s3引用该字符串</span><br><span class="line">String s4 = s1.intern(); StringPool已经存在字符</span><br><span class="line">串<span class="string">"aaa"</span>,s4直接引用该字符串</span><br><span class="line">System.out.println(s3==s4); <span class="keyword">true</span>,s3,s4引用的是StringPool中同一个字符串<span class="string">"aaa"</span></span><br></pre></td></tr></table></figure>
 <h4 id="字面量形式创建字符串"><a href="#字面量形式创建字符串" class="headerlink" title="字面量形式创建字符串"></a>字面量形式创建字符串</h4><p>如果是采用 “bbb” 这种字面量的形式创建字符串，会自动地将字符串放入 String Pool 中，区别于使用new在堆中创建对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String s5 = &quot;bbb&quot;;	StringPool新增字符串&quot;bbb&quot;</span><br><span class="line">String s6 = &quot;bbb&quot;;	引用StringPool中的&quot;bbb&quot;</span><br><span class="line">System.out.println(s5 == s6);  // true</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String s5 = <span class="string">"bbb"</span>;	StringPool新增字符串<span class="string">"bbb"</span></span><br><span class="line">String s6 = <span class="string">"bbb"</span>;	引用StringPool中的<span class="string">"bbb"</span></span><br><span class="line">System.out.println(s5 == s6);  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 <h4 id="new-String-“abc”"><a href="#new-String-“abc”" class="headerlink" title="new String(“abc”)"></a>new String(“abc”)</h4><p>如果StringPool中没有“abc”，这种方式会创建两个字符串对象:</p>
 <ul>
 <li>“abc” 属于字符串字面量，因此编译时期会在 String Pool 中创建一个字符串对象 “abc”</li>
@@ -513,11 +513,11 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">int</span> value = <span class="number">1</span>; value的值将不能修改</span><br><span class="line"></span><br><span class="line"><span class="keyword">final</span> Student stu = <span class="keyword">new</span> Student();	stu将不能引用其他Student对象</span><br><span class="line">stu.name=<span class="string">"傻狍子"</span>;  stu本身数据可以修改</span><br></pre></td></tr></table></figure>
 <p><strong>2. final修饰方法</strong></p>
 <p>声明方法不能被子类重写。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public final viod Method()&#123;&#125;	//Method方法不能被重写</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> viod <span class="title">Method</span><span class="params">()</span></span>&#123;&#125;	<span class="comment">//Method方法不能被重写</span></span><br></pre></td></tr></table></figure>
 <p>private 方法隐式地被指定为 final，如果在子类中定义的方法和基类中的一个 private 方法签名相同，此时子类的方法不是重写基类方法，而是在子类中定义了一个新的方法。</p>
 <p><strong>3. final修饰类</strong></p>
 <p>声明类不允许被继承。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public final class String&#123;&#125;	//String类不可被继承</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">String</span></span>&#123;&#125;	<span class="comment">//String类不可被继承</span></span><br></pre></td></tr></table></figure>
 <h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><p><strong>1. 静态变量</strong></p>
 <ul>
 <li>静态变量：直接属于类，在类初始化时被初始化，通过类名直接访问</li>
@@ -593,8 +593,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/12/MarkDown编写文章/" rel="next" title="MarkDown编写文章">
-                <i class="fa fa-chevron-left"></i> MarkDown编写文章
+              <a href="/2019/04/11/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -685,7 +685,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
