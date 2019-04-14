@@ -88,19 +88,20 @@
 
 
 
-<meta name="description" content="Java容器">
+<meta name="description" content="Java容器1.概览Java容器只要包括collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。 Collection框架图    Collection种类 特点     TreeSet 基于红黑树实现，支持有序性操作，例如根据一个范围查找元素的操作。但是查找效率不如 HashSet，HashSet 查找的时间复杂度为 O(1)">
 <meta name="keywords" content="JavaSE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java容器">
 <meta property="og:url" content="https://RookieQI.github.io/2019/04/13/Java容器/index.html">
 <meta property="og:site_name" content="YangQi&#39;s blogs">
-<meta property="og:description" content="Java容器">
+<meta property="og:description" content="Java容器1.概览Java容器只要包括collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。 Collection框架图    Collection种类 特点     TreeSet 基于红黑树实现，支持有序性操作，例如根据一个范围查找元素的操作。但是查找效率不如 HashSet，HashSet 查找的时间复杂度为 O(1)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://rookieqi.github.io/2019/04/13/Java容器/col.png">
-<meta property="og:updated_time" content="2019-04-13T15:59:18.714Z">
+<meta property="og:image" content="https://rookieqi.github.io/2019/04/13/Java容器/Map.png">
+<meta property="og:updated_time" content="2019-04-14T00:42:11.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java容器">
-<meta name="twitter:description" content="Java容器">
+<meta name="twitter:description" content="Java容器1.概览Java容器只要包括collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。 Collection框架图    Collection种类 特点     TreeSet 基于红黑树实现，支持有序性操作，例如根据一个范围查找元素的操作。但是查找效率不如 HashSet，HashSet 查找的时间复杂度为 O(1)">
 <meta name="twitter:image" content="https://rookieqi.github.io/2019/04/13/Java容器/col.png">
 
 
@@ -373,7 +374,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3
+                  312
                 </span>
               
 
@@ -410,7 +411,51 @@
       
 
       
-        <h1 id="Java容器"><a href="#Java容器" class="headerlink" title="Java容器"></a>Java容器</h1><p><img src="/2019/04/13/Java容器/col.png" alt></p>
+        <h1 id="Java容器"><a href="#Java容器" class="headerlink" title="Java容器"></a>Java容器</h1><h2 id="1-概览"><a href="#1-概览" class="headerlink" title="1.概览"></a>1.概览</h2><p>Java容器只要包括collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。</p>
+<h3 id="Collection框架图"><a href="#Collection框架图" class="headerlink" title="Collection框架图"></a>Collection框架图</h3><p><img src="/2019/04/13/Java容器/col.png" alt></p>
+<table>
+<thead>
+<tr>
+<th>Collection种类</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TreeSet</td>
+<td>基于红黑树实现，支持有序性操作，例如根据一个范围查找元素的操作。但是查找效率不如 HashSet，HashSet 查找的时间复杂度为 O(1)，TreeSet 则为 O(logN)。</td>
+</tr>
+<tr>
+<td>HashSet</td>
+<td>基于哈希表实现，支持快速查找，但不支持有序性操作。并且失去了元素的插入顺序信息，也就是说使用 Iterator 遍历 HashSet 得到的结果是不确定的。</td>
+</tr>
+<tr>
+<td>LinkedHashSet</td>
+<td>具有 HashSet 的查找效率，且内部使用双向链表维护元素的插入顺序。</td>
+</tr>
+<tr>
+<td>ArrayList(常用)</td>
+<td>基于动态数组实现，支持随机访问，线程不安全</td>
+</tr>
+<tr>
+<td>Vector</td>
+<td>和 ArrayList 类似，但它是线程安全的</td>
+</tr>
+<tr>
+<td>LinkedList</td>
+<td>基于双向链表实现，只能顺序访问，但是可以快速地在链表中间插入和删除元素。不仅如此，LinkedList 还可以用作栈、队列和双向队列</td>
+</tr>
+<tr>
+<td>LinkedList：</td>
+<td>可以用它来实现双向队列</td>
+</tr>
+<tr>
+<td>PriorityQueue：</td>
+<td>基于堆结构实现，可以用它来实现优先队列</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Map框架图"><a href="#Map框架图" class="headerlink" title="Map框架图"></a>Map框架图</h3><p><img src="/2019/04/13/Java容器/Map.png" alt></p>
 
       
     </div>
@@ -439,7 +484,7 @@
   <p><span>本文标题:</span><a href="/2019/04/13/Java容器/">Java容器</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 齐阳 的个人博客">齐阳</a></p>
   <p><span>发布时间:</span>2019年04月13日 - 23:04</p>
-  <p><span>最后更新:</span>2019年04月13日 - 23:04</p>
+  <p><span>最后更新:</span>2019年04月14日 - 08:04</p>
   <p><span>原始链接:</span><a href="/2019/04/13/Java容器/" title="Java容器">https://RookieQI.github.io/2019/04/13/Java容器/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://RookieQI.github.io/2019/04/13/Java容器/" aria-label="复制成功！"></i></span>
   </p>
@@ -647,7 +692,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java容器"><span class="nav-number">1.</span> <span class="nav-text">Java容器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java容器"><span class="nav-number">1.</span> <span class="nav-text">Java容器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概览"><span class="nav-number">1.1.</span> <span class="nav-text">1.概览</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Collection框架图"><span class="nav-number">1.1.1.</span> <span class="nav-text">Collection框架图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map框架图"><span class="nav-number">1.1.2.</span> <span class="nav-text">Map框架图</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
