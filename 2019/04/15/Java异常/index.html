@@ -88,14 +88,17 @@
 
 
 
+<meta name="description" content="Java异常如：文件找不到、网络连接失败、除0操作、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。 Java 异常的概念Java异常是一个描述在代码段中发生异常的对象，当发生异常情况时(如：文件找不到、网络连接失败、除0操作、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。)，一个代表该异常的对象被创建并且在导致该异常的方法中被抛出，而该方法可以选">
 <meta property="og:type" content="article">
 <meta property="og:title" content="YangQi&#39;s blogs">
 <meta property="og:url" content="https://RookieQI.github.io/2019/04/15/Java异常/index.html">
 <meta property="og:site_name" content="YangQi&#39;s blogs">
+<meta property="og:description" content="Java异常如：文件找不到、网络连接失败、除0操作、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。 Java 异常的概念Java异常是一个描述在代码段中发生异常的对象，当发生异常情况时(如：文件找不到、网络连接失败、除0操作、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。)，一个代表该异常的对象被创建并且在导致该异常的方法中被抛出，而该方法可以选">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-15T13:28:41.205Z">
+<meta property="og:updated_time" content="2019-04-15T15:29:14.552Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="YangQi&#39;s blogs">
+<meta name="twitter:description" content="Java异常如：文件找不到、网络连接失败、除0操作、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。 Java 异常的概念Java异常是一个描述在代码段中发生异常的对象，当发生异常情况时(如：文件找不到、网络连接失败、除0操作、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。)，一个代表该异常的对象被创建并且在导致该异常的方法中被抛出，而该方法可以选">
 
 
 
@@ -367,7 +370,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  401
                 </span>
               
 
@@ -404,7 +407,32 @@
       
 
       
-        
+        <h1 id="Java异常"><a href="#Java异常" class="headerlink" title="Java异常"></a>Java异常</h1><p>如：文件找不到、网络连接失败、除0操作、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。</p>
+<h2 id="Java-异常的概念"><a href="#Java-异常的概念" class="headerlink" title="Java 异常的概念"></a>Java 异常的概念</h2><p>Java异常是一个描述在代码段中发生异常的对象，当发生异常情况时(如：文件找不到、网络连接失败、除0操作、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。)，一个代表该异常的对象被创建并且在导致该异常的方法中被抛出，而该方法可以选择自己处理异常或者传递该异常。</p>
+<p><strong>3. Java 异常类层次结构</strong><br>粉红色的是受检查的异常(checked exceptions),其必须被 try{}catch语句块所捕获,或者在方法签名里通过throws子句声明.<br>另一类异常是运行时异常(runtime exceptions),需要程序员自己分析代码决定是否捕获和处理。<br>而声明为Error的，则属于严重错误,需要根据业务信息进行特殊处理,Error不需要捕捉。<br>中文示例： Exception</p>
+<table>
+<thead>
+<tr>
+<th>异常种类</th>
+<th>异常描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>checked exceptions(受检查的异常)</td>
+<td>必须被try{}catch语句块所捕获，或者在方法签名里通过throws子句声明</td>
+</tr>
+<tr>
+<td>runtime exceptions(运行时异常)</td>
+<td>需要程序员自己分析代码决定是否捕获和处理</td>
+</tr>
+<tr>
+<td>Error(严重错误)</td>
+<td>需要根据业务信息进行特殊处理，Error不需要捕捉也不能捕捉</td>
+</tr>
+</tbody>
+</table>
+
       
     </div>
     
@@ -510,8 +538,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -590,6 +627,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java异常"><span class="nav-number">1.</span> <span class="nav-text">Java异常</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-异常的概念"><span class="nav-number">1.1.</span> <span class="nav-text">Java 异常的概念</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
