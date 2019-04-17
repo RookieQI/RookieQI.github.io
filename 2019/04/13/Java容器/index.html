@@ -88,13 +88,13 @@
 
 
 
-<meta name="description" content="Java容器1.概览Java容器只要包括collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。 Collection框架图    Collection种类 特点     TreeSet 基于红黑树实现，支持有序性操作，可以根据一个范围查找元素。查找效率不如 HashSet，HashSet 查找的时间复杂度为 O(1)，Tree">
+<meta name="description" content="本文章借鉴于GitHub，本人只是根据自身学习情况做了一些删改，并添加了一些自己的理解原文链接 : https://github.com/CyC2018/CS-Notes  Java容器1.概览Java容器只要包括collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。 Collection框架图    Collection种">
 <meta name="keywords" content="JavaSE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java容器">
 <meta property="og:url" content="https://RookieQI.github.io/2019/04/13/Java容器/index.html">
 <meta property="og:site_name" content="YangQi&#39;s blogs">
-<meta property="og:description" content="Java容器1.概览Java容器只要包括collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。 Collection框架图    Collection种类 特点     TreeSet 基于红黑树实现，支持有序性操作，可以根据一个范围查找元素。查找效率不如 HashSet，HashSet 查找的时间复杂度为 O(1)，Tree">
+<meta property="og:description" content="本文章借鉴于GitHub，本人只是根据自身学习情况做了一些删改，并添加了一些自己的理解原文链接 : https://github.com/CyC2018/CS-Notes  Java容器1.概览Java容器只要包括collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。 Collection框架图    Collection种">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://rookieqi.github.io/2019/04/13/Java容器/col.png">
 <meta property="og:image" content="https://rookieqi.github.io/2019/04/13/Java容器/Map.png">
@@ -103,10 +103,10 @@
 <meta property="og:image" content="https://rookieqi.github.io/2019/04/13/Java容器/HashMap.png">
 <meta property="og:image" content="https://rookieqi.github.io/2019/04/13/Java容器/HashMapSelect.png">
 <meta property="og:image" content="https://rookieqi.github.io/2019/04/13/Java容器/ConcurrentHashMap.png">
-<meta property="og:updated_time" content="2019-04-16T13:42:36.434Z">
+<meta property="og:updated_time" content="2019-04-17T05:07:16.614Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java容器">
-<meta name="twitter:description" content="Java容器1.概览Java容器只要包括collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。 Collection框架图    Collection种类 特点     TreeSet 基于红黑树实现，支持有序性操作，可以根据一个范围查找元素。查找效率不如 HashSet，HashSet 查找的时间复杂度为 O(1)，Tree">
+<meta name="twitter:description" content="本文章借鉴于GitHub，本人只是根据自身学习情况做了一些删改，并添加了一些自己的理解原文链接 : https://github.com/CyC2018/CS-Notes  Java容器1.概览Java容器只要包括collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。 Collection框架图    Collection种">
 <meta name="twitter:image" content="https://rookieqi.github.io/2019/04/13/Java容器/col.png">
 
 
@@ -179,7 +179,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">学习让我在喧嚣的世界保持清醒</p>
       
   </div>
 
@@ -416,7 +416,10 @@
       
 
       
-        <h1 id="Java容器"><a href="#Java容器" class="headerlink" title="Java容器"></a>Java容器</h1><h2 id="1-概览"><a href="#1-概览" class="headerlink" title="1.概览"></a>1.概览</h2><p>Java容器只要包括collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。</p>
+        <blockquote>
+<p>本文章借鉴于GitHub，本人只是根据自身学习情况做了一些删改，并添加了一些自己的理解<br>原文链接 : <a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener">https://github.com/CyC2018/CS-Notes</a></p>
+</blockquote>
+<h1 id="Java容器"><a href="#Java容器" class="headerlink" title="Java容器"></a>Java容器</h1><h2 id="1-概览"><a href="#1-概览" class="headerlink" title="1.概览"></a>1.概览</h2><p>Java容器只要包括collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对（两个对象）的映射表。</p>
 <h3 id="Collection框架图"><a href="#Collection框架图" class="headerlink" title="Collection框架图"></a>Collection框架图</h3><p><img src="/2019/04/13/Java容器/col.png" alt></p>
 <table>
 <thead>
@@ -680,8 +683,9 @@ Entry(int h, K k, V v, Entry&lt;K,V&gt; n) {
 <li>当调用 put() 方法时，如果 eden 的大小超过了 size，那么就将 eden 中的所有对象都放入 longterm 中，利用虚拟机回收掉一部分不经常使用的对象。</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcurrentCache</span>&lt;<span class="title">K</span>, <span class="title">V</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Map&lt;K, V&gt; eden;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Map&lt;K, V&gt; longterm;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ConcurrentCache</span><span class="params">(<span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.size = size;</span><br><span class="line">        <span class="keyword">this</span>.eden = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(size);</span><br><span class="line">        <span class="keyword">this</span>.longterm = <span class="keyword">new</span> WeakHashMap&lt;&gt;(size);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> V <span class="title">get</span><span class="params">(K k)</span> </span>&#123;</span><br><span class="line">        V v = <span class="keyword">this</span>.eden.get(k);</span><br><span class="line">        <span class="keyword">if</span> (v == <span class="keyword">null</span>) &#123;</span><br><span class="line">            v = <span class="keyword">this</span>.longterm.get(k);</span><br><span class="line">            <span class="keyword">if</span> (v != <span class="keyword">null</span>)</span><br><span class="line">                <span class="keyword">this</span>.eden.put(k, v);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> v;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(K k, V v)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.eden.size() &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">this</span>.longterm.putAll(<span class="keyword">this</span>.eden);</span><br><span class="line">            <span class="keyword">this</span>.eden.clear();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.eden.put(k, v);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>声明 : 本文章借鉴于GitHub上，本人只是根据自身学习情况做了一些删改，并添加了一些自己的理解</p>
-<p>原文链接 : <a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener">https://github.com/CyC2018/CS-Notes</a></p>
+<blockquote>
+<p>参考资料 :  <a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener">https://github.com/CyC2018/CS-Notes</a> </p>
+</blockquote>
 
       
     </div>
@@ -710,7 +714,7 @@ Entry(int h, K k, V v, Entry&lt;K,V&gt; n) {
   <p><span>本文标题:</span><a href="/2019/04/13/Java容器/">Java容器</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 齐阳 的个人博客">齐阳</a></p>
   <p><span>发布时间:</span>2019年04月13日 - 23:04</p>
-  <p><span>最后更新:</span>2019年04月16日 - 21:04</p>
+  <p><span>最后更新:</span>2019年04月17日 - 13:04</p>
   <p><span>原始链接:</span><a href="/2019/04/13/Java容器/" title="Java容器">https://RookieQI.github.io/2019/04/13/Java容器/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://RookieQI.github.io/2019/04/13/Java容器/" aria-label="复制成功！"></i></span>
   </p>
@@ -840,7 +844,7 @@ Entry(int h, K k, V v, Entry&lt;K,V&gt; n) {
               <img class="site-author-image" itemprop="image" src="/images/panda.png" alt="齐阳">
             
               <p class="site-author-name" itemprop="name">齐阳</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">一名大二学生</p>
           </div>
 
           <nav class="site-state motion-element">

@@ -97,7 +97,7 @@
 <meta property="og:description" content="Java异常如：文件找不到、网络连接失败、除0操作、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。 Java 异常的概念Java异常是一个描述在代码段中发生异常的对象，当发生异常情况时(如：文件找不到、网络连接失败、除0操作、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。)，一个代表该异常的对象被创建并且在导致该异常的方法中被抛出，而该方法可以选">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://rookieqi.github.io/2019/04/15/Java异常/Java异常.png">
-<meta property="og:updated_time" content="2019-04-16T13:42:27.923Z">
+<meta property="og:updated_time" content="2019-04-17T05:07:32.682Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java异常">
 <meta name="twitter:description" content="Java异常如：文件找不到、网络连接失败、除0操作、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。 Java 异常的概念Java异常是一个描述在代码段中发生异常的对象，当发生异常情况时(如：文件找不到、网络连接失败、除0操作、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。)，一个代表该异常的对象被创建并且在导致该异常的方法中被抛出，而该方法可以选">
@@ -173,7 +173,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">学习让我在喧嚣的世界保持清醒</p>
       
   </div>
 
@@ -459,7 +459,7 @@
 <p>在一个 try-catch 语句块中可以捕获多个异常类型，并对不同类型的异常做出不同的处理</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">readFile</span><span class="params">(String filePath)</span></span>&#123;</span><br><span class="line">  <span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">catch</span>(FileNotFoundException e) &#123;</span><br><span class="line">    <span class="comment">//处理 FileNotFoundException</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">    <span class="comment">//处理 IOException</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>同一个 catch 也可以捕获多种类型异常，用 | 隔开</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">privatestaticvoidreadFile(String filePath)&#123;</span><br><span class="line">  <span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">catch</span>(FileNotFoundException | UnknownHostException e) &#123;</span><br><span class="line">    <span class="comment">// 处理 FileNotFoundException 或 UnknownHostException</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">    <span class="comment">// 处理 IOException</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">readFile</span><span class="params">(String filePath)</span></span>&#123;</span><br><span class="line">  <span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">catch</span>(FileNotFoundException | UnknownHostException e) &#123;</span><br><span class="line">    <span class="comment">// 处理 FileNotFoundException 或 UnknownHostException</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">    <span class="comment">// 处理 IOException</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h3><p><strong>自定义异常</strong></p>
 <p>自定义异常类最好包含一个无参构造函数和一个带有详细描述信息的构造函数（Throwable 的 toString 方法会打印这些详细信息，调试时很有用）</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyException</span> <span class="keyword">extends</span> <span class="title">Exception</span></span>&#123; <span class="comment">//需要继承Exception类</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">MyException</span><span class="params">()</span></span>&#123; </span><br><span class="line">  </span><br><span class="line">  &#125; </span><br><span class="line">  publicMyException(Stringmsg)&#123;</span><br><span class="line">    <span class="keyword">super</span>(msg); </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -490,7 +490,9 @@
 <p>NullPointerException(空指针)</p>
 <p>ArrayStoreException(数据存储异常，操作数组时类型不一致)</p>
 <p>还有IO操作的BufferOverflowException异常</p>
-<p>本篇文章借鉴自腾讯云</p>
+<blockquote>
+<p>参考资料 :  <a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener">https://github.com/CyC2018/CS-Notes</a> </p>
+</blockquote>
 
       
     </div>
@@ -519,7 +521,7 @@
   <p><span>本文标题:</span><a href="/2019/04/15/Java异常/">Java异常</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 齐阳 的个人博客">齐阳</a></p>
   <p><span>发布时间:</span>2019年04月15日 - 17:04</p>
-  <p><span>最后更新:</span>2019年04月16日 - 21:04</p>
+  <p><span>最后更新:</span>2019年04月17日 - 13:04</p>
   <p><span>原始链接:</span><a href="/2019/04/15/Java异常/" title="Java异常">https://RookieQI.github.io/2019/04/15/Java异常/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://RookieQI.github.io/2019/04/15/Java异常/" aria-label="复制成功！"></i></span>
   </p>
@@ -649,7 +651,7 @@
               <img class="site-author-image" itemprop="image" src="/images/panda.png" alt="齐阳">
             
               <p class="site-author-name" itemprop="name">齐阳</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">一名大二学生</p>
           </div>
 
           <nav class="site-state motion-element">
