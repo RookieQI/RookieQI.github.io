@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript]]></title>
+    <url>%2F2019%2F05%2F10%2FJavaScript%2F</url>
+    <content type="text"><![CDATA[JavaScript基础知识Java后端开发也很有必要学习Html,CSS,JavaScript等前端知识,以下是JavaScript的一些基础知识 搬运自 : https://lidaguang1989.github.io JS基本概念 JS操作符 JS基本语句 JS数组用法 JSDate用法 JS字符串用法 JS编程风格 JS编程实践]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[SpringJDBC]]></title>
     <url>%2F2019%2F05%2F06%2FSpringJDBC%2F</url>
     <content type="text"><![CDATA[Spring JDBC Spring框架对JDBC的简单封装。提供了一个JDBCTemplate对象简化JDBC的开发 步骤： 导入jar包 创建JdbcTemplate对象。依赖于数据源DataSource JdbcTemplate template = new JdbcTemplate(ds); 调用JdbcTemplate的方法来完成CRUD的操作 update():执行DML语句。增、删、改语句 queryForMap():查询结果将结果集封装为map集合，将列名作为key，将值作为value 将这条记录封装为一个map集合 注意：这个方法查询的结果集长度只能是1 queryForList():查询结果将结果集封装为list集合 注意：将每一条记录封装为一个Map集合，再将Map集合装载到List集合中 query():查询结果，将结果封装为JavaBean对象 query的参数：RowMapper 一般我们使用BeanPropertyRowMapper实现类。可以完成数据到JavaBean的自动封装 new BeanPropertyRowMapper&lt;类型&gt;(类型.class) queryForObject：查询结果，将结果封装为对象 一般用于聚合函数的查询 JDBCTemplate常用操作实例： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104/* 测试JdbcTemplate的一些方法 */public class JDBCTemplateDemo &#123; private JdbcTemplate jdbcTemplate = new JdbcTemplate(JDBCUtil.getDataSource()); //修改记录 @Test public void testUpdate()&#123; String sql = "UPDATE studentlogin SET password=? where username=?"; int count = jdbcTemplate.update(sql, "dalanqiu", "caixukun"); &#125; //插入记录 @Test public void testInsert()&#123; String sql = "INSERT INTO studentlogin values(?,?)"; int count = jdbcTemplate.update(sql, "huanong", "henpiaoliang"); &#125; //删除记录 @Test public void testDelete()&#123; String sql = "DELETE FROM studentlogin where username=?"; int count = jdbcTemplate.update(sql, "caixukun"); &#125; /* queryForMap()方法: 查询一条记录,将其封装成Map 例如查询到记录&#123;username='shapaozi' password='123456'&#125; 对应Map的键值对为key="username",value="shapaozi"这种形式 */ @Test public void testQueryForMap()&#123; String sql = "SELECT * FROM studentlogin WHERE username=?"; Map&lt;String, Object&gt; shapaozi = jdbcTemplate.queryForMap(sql, "shapaozi"); System.out.println(shapaozi); &#125; /* quertForList()方法: 查询多条记录,返回一个List List每个元素是一个Map,对应一条记录 */ @Test public void testQuertForList()&#123; String sql = "SELECT * FROM studentlogin"; List&lt;Map&lt;String, Object&gt;&gt; students = jdbcTemplate.queryForList(sql); System.out.println(students); &#125; /* query()方法: 查询多条记录,返回JavaBean对象的List 在匿名内部类的mapRow方法中完成结果集到JeanBean的封装 */ @Test public void testQuery_1()&#123; String sql = "SELECT * FROM studentlogin"; List&lt;Student&gt; students = jdbcTemplate.query(sql, new RowMapper&lt;Student&gt;() &#123; @Override public Student mapRow(ResultSet resultSet, int i) throws SQLException &#123; Student student = new Student(); String username = resultSet.getString("username"); String password = resultSet.getString("password"); student.setUsername(username); student.setPassword(password); return student; &#125; &#125;); for (Student student : students) &#123; System.out.println(student); &#125; &#125; /* textQuery_1的升级版: BeanPropertyRowMapper完成结果集到JavaBean的自动封装 */ @Test public void textQuery_2()&#123; String sql = "SELECT * FROM studentlogin"; //传入BeanPropertyRowMapper对象,还要传入JavaBean的class对象 List&lt;Student&gt; students = jdbcTemplate.query(sql, new BeanPropertyRowMapper&lt;Student&gt;(Student.class)); for (Student student : students) &#123; System.out.println(student); &#125; &#125; /* queryForObject方法: 传入预期类型的class对象获得预期返回类型 */ @Test public void textQueryForObject()&#123; String sql = "SELECT count(*) FROM studentlogin"; //该语句返回结果为long类型,因此传入long.class Long count = jdbcTemplate.queryForObject(sql, Long.class); System.out.println(count); &#125;&#125;]]></content>
@@ -98,7 +106,7 @@
   <entry>
     <title><![CDATA[博客的起点]]></title>
     <url>%2F2019%2F04%2F12%2F%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D%2F</url>
-    <content type="text"><![CDATA[## 博客用途 : 作为编程学习笔记,让知识系统化,方便学习中查看 正式学习需了解 : Java 完整学习路线 JAVA 基础 JAVA 概述 JAVA 基础语法与数据类型 JAVA 继承与多态 JAVA Object类详解 JAVA 容器 JAVA 异常 JAVA I/O JavaWeb SAX解析XML SpringJDBC 由于博客只搭建了几天，更多文章以后会陆续更新。。。]]></content>
+    <content type="text"><![CDATA[## 博客用途 : 部分搬运和筛选,部分自己写的Java后端学习笔记 正式学习需了解 : Java 完整学习路线 JAVA 基础 JAVA 概述 JAVA 基础语法与数据类型 JAVA 继承与多态 JAVA Object类详解 JAVA 容器 JAVA 异常 JAVA I/O JavaWeb后端知识 SAX解析XML SpringJDBC 前端知识 JavaScript]]></content>
   </entry>
   <entry>
     <title><![CDATA[Typora基本用法]]></title>

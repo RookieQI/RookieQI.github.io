@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://RookieQI.github.io/"/>
-  <updated>2019-05-06T15:39:17.512Z</updated>
+  <updated>2019-05-10T16:06:55.465Z</updated>
   <id>https://RookieQI.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript</title>
+    <link href="https://RookieQI.github.io/2019/05/10/JavaScript/"/>
+    <id>https://RookieQI.github.io/2019/05/10/JavaScript/</id>
+    <published>2019-05-10T15:56:59.000Z</published>
+    <updated>2019-05-10T16:06:55.465Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JavaScript基础知识"><a href="#JavaScript基础知识" class="headerlink" title="JavaScript基础知识"></a>JavaScript基础知识</h1><p>Java后端开发也很有必要学习Html,CSS,JavaScript等前端知识,以下是JavaScript的一些基础知识</p><blockquote><p>搬运自 : <a href="https://lidaguang1989.github.io/" target="_blank" rel="noopener">https://lidaguang1989.github.io</a></p></blockquote><h2 id="JS基本概念"><a href="#JS基本概念" class="headerlink" title="JS基本概念"></a>JS基本概念</h2><p><img src="/2019/05/10/JavaScript/JS基本概念.jpg" alt></p><h2 id="JS操作符"><a href="#JS操作符" class="headerlink" title="JS操作符"></a>JS操作符</h2><p><img src="/2019/05/10/JavaScript/JS操作符.jpg" alt></p><h2 id="JS基本语句"><a href="#JS基本语句" class="headerlink" title="JS基本语句"></a>JS基本语句</h2><p><img src="/2019/05/10/JavaScript/JS基本语句.jpg" alt></p><h2 id="JS数组用法"><a href="#JS数组用法" class="headerlink" title="JS数组用法"></a>JS数组用法</h2><p><img src="/2019/05/10/JavaScript/JS数组用法.jpg" alt></p><h2 id="JSDate用法"><a href="#JSDate用法" class="headerlink" title="JSDate用法"></a>JSDate用法</h2><p><img src="/2019/05/10/JavaScript/JSDate用法.jpg" alt></p><h2 id="JS字符串用法"><a href="#JS字符串用法" class="headerlink" title="JS字符串用法"></a>JS字符串用法</h2><p><img src="/2019/05/10/JavaScript/JS字符串用法.jpg" alt></p><h2 id="JS编程风格"><a href="#JS编程风格" class="headerlink" title="JS编程风格"></a>JS编程风格</h2><p><img src="/2019/05/10/JavaScript/JS编程风格.jpg" alt></p><h2 id="JS编程实践"><a href="#JS编程实践" class="headerlink" title="JS编程实践"></a>JS编程实践</h2><p><img src="/2019/05/10/JavaScript/JS编程实践.jpg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;JavaScript基础知识&quot;&gt;&lt;a href=&quot;#JavaScript基础知识&quot; class=&quot;headerlink&quot; title=&quot;JavaScript基础知识&quot;&gt;&lt;/a&gt;JavaScript基础知识&lt;/h1&gt;&lt;p&gt;Java后端开发也很有必要学习Html,CS
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://RookieQI.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>SpringJDBC</title>
@@ -319,9 +342,9 @@
     <link href="https://RookieQI.github.io/2019/04/12/%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/"/>
     <id>https://RookieQI.github.io/2019/04/12/博客介绍/</id>
     <published>2019-04-12T13:56:59.000Z</published>
-    <updated>2019-05-06T15:36:31.244Z</updated>
+    <updated>2019-05-10T16:03:01.851Z</updated>
     
-    <content type="html"><![CDATA[<p>## </p><p>博客用途 :</p><ul><li>作为编程学习笔记,让知识系统化,方便学习中查看</li></ul><p><strong>正式学习需了解</strong> : <a href="/2019/04/15/Java学习路线/#more">Java 完整学习路线</a></p><hr><h3 id="JAVA-基础"><a href="#JAVA-基础" class="headerlink" title="JAVA 基础"></a>JAVA 基础</h3><ul><li>JAVA 概述</li><li><a href="/2019/04/12/Java基础语法与数据类型/#more">JAVA 基础语法与数据类型</a></li><li><a href="/2019/04/13/继承与多态/#more">JAVA 继承与多态</a></li><li><a href="/2019/04/13/JavaObject类详解/#more">JAVA Object类详解</a></li><li><a href="/2019/04/13/Java容器/#more">JAVA 容器</a></li><li><a href="/2019/04/15/Java异常/#more">JAVA 异常</a></li><li><a href="/2019/04/16/Java-I/O/#more">JAVA I/O</a></li></ul><h3 id="JavaWeb"><a href="#JavaWeb" class="headerlink" title="JavaWeb"></a>JavaWeb</h3><ul><li><a href="/2019/04/24/SAX解析XML/#more">SAX解析XML</a></li><li><a href="/2019/05/06/SpringJDBC/#more">SpringJDBC</a></li></ul><p>由于博客只搭建了几天，更多文章以后会陆续更新。。。</p>]]></content>
+    <content type="html"><![CDATA[<p>## </p><p>博客用途 :</p><ul><li>部分搬运和筛选,部分自己写的Java后端学习笔记</li></ul><p><strong>正式学习需了解</strong> : <a href="/2019/04/15/Java学习路线/#more">Java 完整学习路线</a></p><hr><h3 id="JAVA-基础"><a href="#JAVA-基础" class="headerlink" title="JAVA 基础"></a>JAVA 基础</h3><ul><li>JAVA 概述</li><li><a href="/2019/04/12/Java基础语法与数据类型/#more">JAVA 基础语法与数据类型</a></li><li><a href="/2019/04/13/继承与多态/#more">JAVA 继承与多态</a></li><li><a href="/2019/04/13/JavaObject类详解/#more">JAVA Object类详解</a></li><li><a href="/2019/04/13/Java容器/#more">JAVA 容器</a></li><li><a href="/2019/04/15/Java异常/#more">JAVA 异常</a></li><li><a href="/2019/04/16/Java-I/O/#more">JAVA I/O</a></li></ul><h3 id="JavaWeb后端知识"><a href="#JavaWeb后端知识" class="headerlink" title="JavaWeb后端知识"></a>JavaWeb后端知识</h3><ul><li><a href="/2019/04/24/SAX解析XML/#more">SAX解析XML</a></li><li><a href="/2019/05/06/SpringJDBC/#more">SpringJDBC</a></li></ul><h3 id="前端知识"><a href="#前端知识" class="headerlink" title="前端知识"></a>前端知识</h3><ul><li><a href="/2019/05/10/JavaScript/#more">JavaScript</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -330,9 +353,9 @@
         &lt;p&gt;## &lt;/p&gt;
 &lt;p&gt;博客用途 :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;作为编程学习笔记,让知识系统化,方便学习中查看&lt;/li&gt;
+&lt;li&gt;部分搬运和筛选,部分自己写的Java后端学习笔记&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;正式学习需了解&lt;/strong&gt; : &lt;a href=&quot;/2019/04/15/Java学习路线/#more&quot;&gt;Java
+&lt;p&gt;&lt;strong&gt;正式学习需了解&lt;/strong&gt; : &lt;a href=&quot;/2019/04/15/Java学习路线/#more&quot;&gt;Jav
       
     
     </summary>
